@@ -66,7 +66,8 @@
     // border-radius: 50px;
     color: var(--greyDark);
     transition: all .5s ease;
-    &:hover { color: var(--primary)};
+    &:hover { color: var(--primary);
+    cursor: pointer;};
     
 }
 
@@ -108,7 +109,7 @@
 .table__window{
     margin-top: 20px;
     height: 350px;
-    width: 250px;
+    width: 350px;
     box-shadow: $shadow;
     border-radius: 15px;
 
@@ -148,9 +149,9 @@
     }
 }
 .build{
-    position: absolute;
-    left: 42%;
-    bottom: 50px;
+    // position: absolute;
+    // left: 42%;
+    // bottom: 50px;
     height: 170px;
     display: flex;
     flex-direction: column;
@@ -173,5 +174,80 @@
     &__active{
         box-shadow: $inner-shadow;
         color: var(--primary);
+    }
+}
+.table__window{
+    padding: 10px;
+}
+.table__input{
+    outline: none;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 20%;
+    margin: 5px;
+    text-align: center;
+    background: var(--greyLight-1);
+    box-shadow: $inner-shadow;
+    color: var(--primary);
+}
+.table__btns{
+    margin-top: 20px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.table__button{
+    width: 40px;
+    height: 40px;
+    box-shadow: $shadow;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    
+    &::after{
+        content: '';
+        height: 15px;
+        width: 3px;
+        background: var(--greyDark);
+        border-radius: 20%;
+        transform: rotate(90deg);
+        
+    }
+    &:hover{
+        &::after{
+            background: var(--primary);
+        }
+        
+    }
+    &:active{
+        box-shadow:$inner-shadow;
+    &::before{
+        background: var(--primary);
+    }
+    &::after{
+        background: var(--primary);
+    }
+    }
+}
+.plus{
+    &::before{
+        content: '';
+        height: 15px;
+        width: 3px;
+        background: var(--greyDark);
+        border-radius: 20%;
+        transform: translateX(100%);
+        
+        
+    }
+    &:hover{
+        &::before{
+            background: var(--primary);
+        }
+        
     }
 }
