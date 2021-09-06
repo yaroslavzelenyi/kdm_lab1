@@ -24,9 +24,7 @@
   
 
 
-#mynetwork{
-    height: 500px;
-}
+
 .container {
     min-height: 100vh;
     display: flex;
@@ -148,7 +146,7 @@
         fill: var(--primary) !important;
     }
 }
-.build{
+.build-buttons{
     // position: absolute;
     // left: 42%;
     // bottom: 50px;
@@ -170,11 +168,12 @@
         &:hover{
             color: var(--primary);
         }
+        &:active{
+            box-shadow: $inner-shadow;
+            color: var(--primary);
+        }
     }
-    &__active{
-        box-shadow: $inner-shadow;
-        color: var(--primary);
-    }
+    
 }
 .table__window{
     padding: 10px;
@@ -250,4 +249,90 @@
         }
         
     }
+}
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    // overflow: hidden;
+    background-color: rgba(32, 34, 45, 0.8);
+    &__wrapper{
+        width: 600px;
+        position: relative;
+        margin: 0 auto;
+    }
+    &__window{
+        margin: 15% auto;
+        padding: 20px;
+        background: var(--greyDark);
+        box-shadow: -10px -10px 20px 0px rgba(255,255,255,0.05), 10px 10px 20px 0px rgba(0,0,0,0.2);
+        border-radius: 3%;
+        width: 600px;
+        height: 500px;
+        max-width: 100%;
+    }
+}
+.close{
+    position: absolute;
+    top: -11%;
+    left: 110%;
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
+    img{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+#mynetwork{
+    background-color:#20222d;
+}
+
+#mynetwork .vis-manipulation {
+    background: none;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    top: auto;
+}
+#mynetwork .vis-edit-mode {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 7px;
+    margin-left: 10px;
+    top: auto;
+    border: none;
+}
+#mynetwork .vis-edit {
+    background: none;
+    color: #fff;
+}
+#mynetwork .vis-button {
+    background: rgba(255, 255, 255, 0.1);
+    width: 70px;
+    border-radius: 10px;
+    transition: 0.3s all;
+}
+#mynetwork .vis-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+#mynetwork .vis-edit .vis-label {
+    margin-left: 0;
+}
+#mynetwork .vis-add,  #mynetwork .vis-connect{
+    width: 80px;
+}
+#mynetwork .vis-add .vis-label,  #mynetwork .vis-connect .vis-label, #mynetwork .vis-back .vis-label {
+    margin-left: 0;
+}
+#mynetwork .vis-delete {
+    width: 120px;
+}
+#mynetwork .vis-delete .vis-label {
+    margin-left: 0;
 }

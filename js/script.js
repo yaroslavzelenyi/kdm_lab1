@@ -18,14 +18,24 @@ var edges = new vis.DataSet([
 ]);
 
 // create a network
-var container = document.querySelector('#mynetwork');
+var container = document.getElementById('mynetwork');
 
 // provide the data in the vis format
 var data = {
     nodes: nodes,
     edges: edges
 };
-var options = {};
+var options = {
+    manipulation: {
+        enabled: true,
+        addEdge: function (edgeData, callback) {
+            if(graphType) {
+                edgeData.arrows = 'to';
+            }
+            callback(edgeData);
+        }
+    }
+};
 
 // initialize your network!
 var network = new vis.Network(container, data, options);

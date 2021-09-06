@@ -17,10 +17,6 @@
           box-sizing: inherit;
 }
 
-#mynetwork {
-  height: 500px;
-}
-
 .container {
   min-height: 100vh;
   display: -webkit-box;
@@ -196,7 +192,7 @@
   fill: var(--primary) !important;
 }
 
-.build {
+.build-buttons {
   height: 170px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -213,7 +209,7 @@
           align-items: center;
 }
 
-.build__item {
+.build-buttons__item {
   border-radius: 20px;
   height: 60px;
   width: 220px;
@@ -232,11 +228,11 @@
   color: var(--greyDark);
 }
 
-.build__item:hover {
+.build-buttons__item:hover {
   color: var(--primary);
 }
 
-.build__active {
+.build-buttons__item:active {
   -webkit-box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
           box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
   color: var(--primary);
@@ -331,5 +327,106 @@
 
 .plus:hover::before {
   background: var(--primary);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(32, 34, 45, 0.8);
+}
+
+.modal__wrapper {
+  width: 600px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.modal__window {
+  margin: 15% auto;
+  padding: 20px;
+  background: var(--greyDark);
+  -webkit-box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.05), 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.05), 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 3%;
+  width: 600px;
+  height: 500px;
+  max-width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: -11%;
+  left: 110%;
+  height: 30px;
+  width: 30px;
+  font-size: 18px;
+}
+
+.close img {
+  height: 30px;
+  width: 30px;
+}
+
+#mynetwork {
+  background-color: #20222d;
+}
+
+#mynetwork .vis-manipulation {
+  background: none;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  top: auto;
+}
+
+#mynetwork .vis-edit-mode {
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 7px;
+  margin-left: 10px;
+  top: auto;
+  border: none;
+}
+
+#mynetwork .vis-edit {
+  background: none;
+  color: #fff;
+}
+
+#mynetwork .vis-button {
+  background: rgba(255, 255, 255, 0.1);
+  width: 70px;
+  border-radius: 10px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+#mynetwork .vis-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+#mynetwork .vis-edit .vis-label {
+  margin-left: 0;
+}
+
+#mynetwork .vis-add, #mynetwork .vis-connect {
+  width: 80px;
+}
+
+#mynetwork .vis-add .vis-label, #mynetwork .vis-connect .vis-label, #mynetwork .vis-back .vis-label {
+  margin-left: 0;
+}
+
+#mynetwork .vis-delete {
+  width: 120px;
+}
+
+#mynetwork .vis-delete .vis-label {
+  margin-left: 0;
 }
 /*# sourceMappingURL=style.css.map */

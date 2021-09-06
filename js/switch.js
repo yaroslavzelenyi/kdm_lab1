@@ -10,10 +10,15 @@ window.addEventListener('DOMContentLoaded', ()=>{
           left = document.querySelector('.left'),
           clear = document.querySelector('.clear'),
           build = document.querySelector('.build'),
-          graphBtns = document.querySelectorAll('.build__item'),
+          graphBtns = document.querySelectorAll('.build-buttons__item'),
           tblBtnAdd = document.querySelector('.plus'),
-          tr = document.getElementsByTagName('tr');
-          
+          tblBtnRemove = document.querySelector('.minus'),
+          tableA = document.querySelector('#tableA'),
+          tableB = document.querySelector('#tableB'),
+          tr = document.getElementsByTagName('tr'),
+          close = document.querySelector('.close'),
+          modal = document.querySelector('.modal');
+          let rowCount;
 
 
     wrapper.addEventListener('click', (event)=>{
@@ -33,19 +38,17 @@ window.addEventListener('DOMContentLoaded', ()=>{
             }
         }
     });
-    function btnAnimate(array, item, activeCLass, first, second){
-        array.forEach((e)=>{
-            e.addEventListener('click',()=>{
-                if(e.classList.contains(item)){
-                    e.classList.toggle(activeCLass);
+    function btnAnimate(array,activeCLass, first, second){
+        array.forEach((btn)=>{
+            btn.addEventListener('click',()=>{
+                btn.classList.toggle(activeCLass);
+                if(btn.classList.contains(first, activeCLass)){
+
+                    array[1].classList.remove(activeCLass);
                 }
-                if(e.classList.contains(first, activeCLass)){
+                if(btn.classList.contains(second, activeCLass)){
                     
-                    window[second].classList.remove(activeCLass);
-                }
-                if(e.classList.contains(second, activeCLass)){
-                    
-                    window[first].classList.remove(activeCLass);
+                    array[0].classList.remove(activeCLass);
                 }
 
             });
@@ -63,11 +66,10 @@ window.addEventListener('DOMContentLoaded', ()=>{
             
         }
         
-        
-        let table = document.querySelector('#table');
+        function buildRowTable(table){
         let newRow = table.insertRow();
-        let rowCount = $('#table tr').length;
         
+        rowCount = $('#tableA tr').length;
         for(let i = 0; i < rowCount; i++){
             
             let td = document.createElement('td');
@@ -81,36 +83,45 @@ window.addEventListener('DOMContentLoaded', ()=>{
         if(rowCount === 8){
             tblBtnAdd.removeEventListener('click',  building);
         }
+        }
+        buildRowTable(tableA);
+        buildRowTable(tableB);
+        
     });
+    tblBtnRemove.addEventListener('click', ()=>{
+        removeColumn();
+        removeRow();
+    });
+    function removeColumn(){
+        let td = document.querySelectorAll('td');
+        let rowLength = $('#tableA tr').length;
+        for (let i = 0; i < rowLength; i++) {
+
+            tr[i].lastElementChild.remove();
+            
+        }
+    }
+    function removeRow(){
+        let rowLength = $('#tableA tr').length;
+        console.log(rowLength);
+        tr[--rowLength].remove();
+    }
+
+    build.addEventListener('click',() =>{
+        modal.style.display = 'block';
+    });
+    close.addEventListener('click', () =>{
+        modal.style.display = 'none';
+    });
+    window.addEventListener('click',(event)=>{
+        if(event.target == modal){
+            modal.style.display = 'none';
+        }
+    });
+    btnAnimate(btns, 'button__active', 'right', 'left');
+    // btnAnimate(graphBtns, 'build-buttons__active', 'build', 'clear');
     
-    btnAnimate(btns, 'arrow', 'button__active', 'right', 'left');
-    btnAnimate(graphBtns, 'build__item', 'build__active', 'build', 'clear');
    
-    // btns.forEach((e)=>{
-    //     e.addEventListener('click',()=>{
-    //         if(e.classList.contains('arrow')){
-    //             e.classList.toggle('button__active');
-    //         }
-    //         if(e.classList.contains('right','button__active')){
-    //             left.classList.remove('button__active');
-    //         }
-    //         if(e.classList.contains('left','button__active')){
-    //             right.classList.remove('button__active');
-    //         }
-    //     });
-    // });
-    // graphBtns.forEach((e)=>{
-    //     e.addEventListener('click', ()=>{
-    //         if(e.classList.contains('build__item')){
-    //             e.classList.toggle('build__active');
-    //         }
-    //         if(e.classList.contains('buildTable','build__item')){
-    //             clear.classList.remove('build__active');
-    //         }
-    //         if(e.classList.contains('clearTable','build__item')){
-    //             build.classList.remove('build__active');
-    //         }
-    //     });
-    // });
+    
 });
 

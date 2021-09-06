@@ -28,7 +28,7 @@
                         ТАБЛИЦЯ СУМІЖНОСТІ
                     </div>
                     <div class="table__window">
-                        <table class="table" id="table">
+                        <table class="table" id="tableA">
                             <tr>
                                 <td><input value="0" type="text" class="table__input"></td>
                                 <td><input value="0" type="text" class="table__input"></td>
@@ -79,7 +79,7 @@
                         ТАБЛИЦЯ ІНЦИДЕНТНОСТІ
                     </div>
                     <div class="table__window">
-                        <table class="table">
+                        <table id="tableB" class="table">
                             <tr>
                                 <td><input value="0" type="text" class="table__input"></td>
                                 <td><input value="0" type="text" class="table__input"></td>
@@ -114,21 +114,32 @@
                 </div>
 
             </div>
-            <div class="build">
-                <div class="build__item build">ПОБУДУВАТИ ГРАФ</div>
-                <div class="build__item clear">ОЧИСТИТИ ТАБЛИЦЮ</div>
+            <div class="build-buttons">
+                <div class="build-buttons__item build">ПОБУДУВАТИ ГРАФ</div>
+                <div class="build-buttons__item clear">ОЧИСТИТИ ТАБЛИЦЮ</div>
             </div>
         </div>
-
+        
     </div>
-    <!-- <div id="mynetwork" class="mygraph"></div> -->
-
-    <!-- <script src="vivagraph.min.js"></script> -->
+    <div class="modal">
+        <div class="modal__wrapper">
+            <div id = 'mynetwork' class="modal__window">
+            </div>
+            <div class="close"> <img src="img/cancel.png" alt="CLOSE"></div>
+        </div>
+        
+    </div>
+    
+    
+    
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <!-- <script src="js/script.js"></script> -->
+   <!-- <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script> -->
+    <script src="js/script.js"></script>
+    
+
     <script src="js/switch.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/svg.js"></script>
+
 
     
 </body>
