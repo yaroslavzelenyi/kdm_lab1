@@ -67,22 +67,23 @@ window.addEventListener('DOMContentLoaded', ()=>{
         }
         
         function buildRowTable(table){
-        let newRow = table.insertRow();
-        
-        rowCount = $('#tableA tr').length;
-        for(let i = 0; i < rowCount; i++){
-            
-            let td = document.createElement('td');
-            let input = document.createElement('INPUT');
-            input.value='0';
-            input.classList = 'table__input';
-            td.appendChild(input);
-            newRow.appendChild(td);
-            
-        }
-        if(rowCount === 8){
-            tblBtnAdd.removeEventListener('click',  building);
-        }
+
+            let newRow = table.insertRow();
+            rowCount = $('#tableA tr').length;
+
+            for(let i = 0; i < rowCount; i++){
+                
+                let td = document.createElement('td');
+                let input = document.createElement('INPUT');
+                input.value='0';
+                input.classList = 'table__input';
+                td.appendChild(input);
+                newRow.appendChild(td);
+                
+            }
+            if(rowCount === 8){
+                tblBtnAdd.removeEventListener('click',  building);
+            }
         }
         buildRowTable(tableA);
         buildRowTable(tableB);
@@ -90,7 +91,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
     });
     tblBtnRemove.addEventListener('click', ()=>{
         removeColumn();
-        removeRow();
+        removeRow(tableA);
+        removeRow(tableB);
     });
     function removeColumn(){
         let td = document.querySelectorAll('td');
@@ -101,21 +103,22 @@ window.addEventListener('DOMContentLoaded', ()=>{
             
         }
     }
-    function removeRow(){
+    function removeRow(table){
+        const tableName = table;
         let rowLength = $('#tableA tr').length;
-        console.log(rowLength);
-        tr[--rowLength].remove();
+        // tr[--rowLength].remove();
+        tableName.deleteRow(--rowLength);
     }
 
     build.addEventListener('click',() =>{
-        modal.style.display = 'block';
+        modal.style.top = '0';
     });
     close.addEventListener('click', () =>{
-        modal.style.display = 'none';
+        modal.style.top = '-110%';
     });
     window.addEventListener('click',(event)=>{
         if(event.target == modal){
-            modal.style.display = 'none';
+            modal.style.top = '-110%';
         }
     });
     btnAnimate(btns, 'button__active', 'right', 'left');

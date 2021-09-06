@@ -25,23 +25,24 @@
 
 
 
-.container {
-    min-height: 100vh;
+body {
     display: flex;
     justify-content: center;
+    align-items: center;
     // align-items: center;
-    padding-top: 20px;
     font-family: 'Montserrat', sans-serif;
     background: var(--greyLight-1);
   }
 
   .components {
+    margin-top: 30px;
     width: 75rem;
-    min-height: 38rem;
+    height: 39rem;
     border-radius: 3rem;
     box-shadow:.8rem .8rem 1.4rem var(--greyLight-2), 
               -.2rem -.2rem 1.8rem var(--white);
-    padding: 30px 0;
+    padding: 30px 0 0 0;
+    
    }
 .switcher__wrapper{
     box-shadow: $shadow;
@@ -84,7 +85,7 @@
   }
 
 .table__wrapper{
-    margin-top: 50px;
+    margin-top: 30px;
     width: 800px;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -112,13 +113,19 @@
     border-radius: 15px;
 
 }
+.column__wrapper{
+    height: 525px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .table__buttons{
-    margin-top: 25%;
-    transform: translateY(-50%);
+    margin-top: 12vw;
     height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items:center;
 }
 .arrow{
     height: 50px;
@@ -128,6 +135,8 @@
     justify-content: center;
     align-items: center;
     box-shadow: $shadow;
+    transition: all .5s ease;
+    
     
     .img-svg path{
         width: 20px;
@@ -147,18 +156,17 @@
     }
 }
 .build-buttons{
-    // position: absolute;
-    // left: 42%;
-    // bottom: 50px;
+    bottom: 50px;
     height: 170px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items:center;
     &__item{
-        border-radius: 20px;
-        height: 60px;
-        width: 220px;
+        // transition: 1s;
+        border-radius: 10px;
+        height: 80px;
+        width: 100px;
         box-shadow: $shadow;
         display: flex;
         justify-content: center;
@@ -174,6 +182,38 @@
         }
     }
     
+}
+.build{
+    &:hover{
+        transition: 0.3s;
+        svg path{
+            fill: var(--primary);
+        }
+    }
+    &:active{
+        svg path{
+            fill: var(--primary);
+        }
+    }
+}
+.clear{
+    svg{
+        width: 30px;
+    }
+    svg path{
+        fill:var(--greyDark);
+    }
+    &:hover{
+        transition: 0.3s;
+        svg path{
+            fill: var(--primary);
+        }
+    }
+    &:active{
+        svg path{
+            fill: var(--primary);
+        }
+    }
 }
 .table__window{
     padding: 10px;
@@ -251,14 +291,13 @@
     }
 }
 .modal{
-    display: none;
-    position: fixed;
+    display: block;
+    position: absolute;
     z-index: 4;
-    left: 0;
-    top: 0;
+    top: -110%;
     width: 100vw;
     height: 100vh;
-    // overflow: hidden;
+    overflow: hidden;
     background-color: rgba(32, 34, 45, 0.8);
     &__wrapper{
         width: 600px;
@@ -284,9 +323,9 @@
     width: 30px;
     font-size: 18px;
     img{
-        height: 30px;
         width: 30px;
     }
+    
 }
 
 #mynetwork{
