@@ -1,176 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,800" rel="stylesheet">
-    <link rel="stylesheet" href="sass/style.css">
-    <title>Document</title>
-</head>
-<body>
-
-    <div class="container">
-        <div class="components">
-            <div class="switcher__wrapper">
-                <div id="tab-1" class="switcher__item active forward">
-                    НЕОРГРАФ
-                </div>
-                <div id="tab-2" class="switcher__item back">
-                    ОРГРАФ
-                </div>
-                <div class="switcher__color"></div>
-
-            </div>
-            <div class="table__wrapper">
-                <div class="table__item">
-                    <div class="table__title">
-                        ТАБЛИЦЯ СУМІЖНОСТІ
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,500,800"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="sass/style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="components">
+                <div class="switcher__wrapper">
+                    <div id="tab-1" class="switcher__item active forward">
+                        НЕОРГРАФ
                     </div>
-                    <div class="table__window">
-                        <table class="table" id="tableA">
-                            <tr>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                            </tr>
-                            <tr>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                            </tr>
-                            <tr>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                            </tr>
-                            <tr>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="table__btns">
-                        <div class="table__button plus tableBtnActive"></div>
-                        <div class="table__button minus"></div>
-                    </div>
+                    <div id="tab-2" class="switcher__item back">ОРГРАФ</div>
+                    <div class="switcher__color"></div>
                 </div>
-                <div class="column__wrapper">
-                    <div class="table__buttons">
-                        <div id="right" class="arrow right">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 113 113" fill="none" class="img-svg replaced-svg">
-                                <path d="M111.194 52.1096L70.3856 11.3004C69.2206 10.1355 67.6681 9.49605 66.0126 9.49605C64.3553 9.49605 62.8036 10.1364 61.6387 11.3004L57.9336 15.0064C56.7696 16.1694 56.1284 17.7229 56.1284 19.3793C56.1284 21.0348 56.7696 22.6407 57.9336 23.8038L81.7406 47.6631H6.10471C2.69452 47.6631 0 50.3328 0 53.7439V58.9832C0 62.3943 2.69452 65.3332 6.10471 65.3332H82.0107L57.9345 89.3258C56.7705 90.4907 56.1293 92.0019 56.1293 93.6583C56.1293 95.3129 56.7705 96.8462 57.9345 98.0102L61.6396 101.704C62.8045 102.869 64.3562 103.504 66.0135 103.504C67.669 103.504 69.2216 102.861 70.3865 101.696L111.195 60.8877C112.362 59.7191 113.005 58.1591 113 56.5009C113.004 54.8372 112.362 53.2763 111.194 52.1096Z" fill="white"></path>
-                                
+                <div class="table__wrapper">
+                    <div class="table__item">
+                        <div class="table__title">ТАБЛИЦЯ СУМІЖНОСТІ</div>
+                        <div class="table__window">
+                            <table class="table" id="tableA">
+                                <tr>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table__btns">
+                            <div
+                                class="table__button plus tableBtnActive"
+                            ></div>
+                            <div class="table__button minus"></div>
+                        </div>
+                    </div>
+                    <div class="column__wrapper">
+                        <div class="table__buttons">
+                            <div id="right" class="arrow right">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="25"
+                                    height="25"
+                                    viewBox="0 0 113 113"
+                                    fill="none"
+                                    class="img-svg replaced-svg"
+                                >
+                                    <path
+                                        d="M111.194 52.1096L70.3856 11.3004C69.2206 10.1355 67.6681 9.49605 66.0126 9.49605C64.3553 9.49605 62.8036 10.1364 61.6387 11.3004L57.9336 15.0064C56.7696 16.1694 56.1284 17.7229 56.1284 19.3793C56.1284 21.0348 56.7696 22.6407 57.9336 23.8038L81.7406 47.6631H6.10471C2.69452 47.6631 0 50.3328 0 53.7439V58.9832C0 62.3943 2.69452 65.3332 6.10471 65.3332H82.0107L57.9345 89.3258C56.7705 90.4907 56.1293 92.0019 56.1293 93.6583C56.1293 95.3129 56.7705 96.8462 57.9345 98.0102L61.6396 101.704C62.8045 102.869 64.3562 103.504 66.0135 103.504C67.669 103.504 69.2216 102.861 70.3865 101.696L111.195 60.8877C112.362 59.7191 113.005 58.1591 113 56.5009C113.004 54.8372 112.362 53.2763 111.194 52.1096Z"
+                                        fill="white"
+                                    ></path>
                                 </svg>
-                            <!-- <img class="img-svg" src="img/right-arrow.svg" alt="right-arrow"> -->
+                                <!-- <img class="img-svg" src="img/right-arrow.svg" alt="right-arrow"> -->
+                            </div>
+                            <div id="left" class="arrow left">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="25"
+                                    height="25"
+                                    viewBox="0 0 113 113"
+                                    fill="none"
+                                    class="img-svg replaced-svg"
+                                >
+                                    <path
+                                        d="M1.80616 52.1096L42.6144 11.3004C43.7794 10.1355 45.3319 9.49605 46.9874 9.49605C48.6447 9.49605 50.1964 10.1364 51.3613 11.3004L55.0664 15.0064C56.2304 16.1694 56.8716 17.7229 56.8716 19.3793C56.8716 21.0348 56.2304 22.6407 55.0664 23.8038L31.2594 47.6631H106.895C110.305 47.6631 113 50.3328 113 53.7439V58.9832C113 62.3943 110.305 65.3332 106.895 65.3332H30.9893L55.0655 89.3258C56.2295 90.4907 56.8707 92.0019 56.8707 93.6583C56.8707 95.3129 56.2295 96.8462 55.0655 98.0102L51.3604 101.704C50.1955 102.869 48.6438 103.504 46.9865 103.504C45.331 103.504 43.7784 102.861 42.6135 101.696L1.80524 60.8877C0.637589 59.7191 -0.00457764 58.1592 1.52588e-05 56.5009C-0.00365448 54.8372 0.637589 53.2763 1.80616 52.1096Z"
+                                        fill="white"
+                                    ></path>
+                                </svg>
+                                <!-- <img class="img-svg" src="img/left-arrow.svg" alt="left-arrow"> -->
+                            </div>
                         </div>
-                        <div id="left" class="arrow left">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 113 113" fill="none" class="img-svg replaced-svg">
-                                <path d="M1.80616 52.1096L42.6144 11.3004C43.7794 10.1355 45.3319 9.49605 46.9874 9.49605C48.6447 9.49605 50.1964 10.1364 51.3613 11.3004L55.0664 15.0064C56.2304 16.1694 56.8716 17.7229 56.8716 19.3793C56.8716 21.0348 56.2304 22.6407 55.0664 23.8038L31.2594 47.6631H106.895C110.305 47.6631 113 50.3328 113 53.7439V58.9832C113 62.3943 110.305 65.3332 106.895 65.3332H30.9893L55.0655 89.3258C56.2295 90.4907 56.8707 92.0019 56.8707 93.6583C56.8707 95.3129 56.2295 96.8462 55.0655 98.0102L51.3604 101.704C50.1955 102.869 48.6438 103.504 46.9865 103.504C45.331 103.504 43.7784 102.861 42.6135 101.696L1.80524 60.8877C0.637589 59.7191 -0.00457764 58.1592 1.52588e-05 56.5009C-0.00365448 54.8372 0.637589 53.2763 1.80616 52.1096Z" fill="white"></path></svg>
-                            <!-- <img class="img-svg" src="img/left-arrow.svg" alt="left-arrow"> -->
-                        </div>
-                    </div>
 
-                    <div class="build-buttons">
-                        <div class="build-buttons__item build">
-                            <?xml version="1.0" standalone="no"?>
-                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-                            "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                            width="40.000000pt" height="40.000000pt" viewBox="0 0 512.000000 512.000000"
-                            preserveAspectRatio="xMidYMid meet">
-        
-                            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-                            fill="#9baacf" stroke="none">
-                            <path d="M420 4573 c-193 -33 -352 -178 -401 -365 -18 -68 -19 -132 -19 -1303
+                        <div class="build-buttons">
+                            <div class="build-buttons__item build">
+                                <?xml version="1.0" standalone="no"?>
+                                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                                <svg
+                                    version="1.0"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="40.000000pt"
+                                    height="40.000000pt"
+                                    viewBox="0 0 512.000000 512.000000"
+                                    preserveAspectRatio="xMidYMid meet"
+                                >
+                                    <g
+                                        transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                                        fill="#9baacf"
+                                        stroke="none"
+                                    >
+                                        <path
+                                            d="M420 4573 c-193 -33 -352 -178 -401 -365 -18 -68 -19 -132 -19 -1303
                             0 -1166 1 -1235 19 -1302 46 -176 177 -308 353 -354 69 -18 144 -19 2188 -19
                             2044 0 2119 1 2188 19 176 46 307 178 353 354 18 67 19 136 19 1302 0 1171 -1
                             1235 -19 1303 -42 159 -156 283 -319 345 l-57 22 -2140 1 c-1177 1 -2151 -1
                             -2165 -3z m4313 -213 c71 -27 141 -96 167 -168 20 -53 20 -71 18 -1305 l-3
                             -1252 -23 -43 c-33 -62 -96 -118 -158 -142 -55 -20 -64 -20 -2174 -20 -2110 0
                             -2119 0 -2174 20 -62 24 -125 80 -158 142 l-23 43 -3 1252 c-2 1234 -2 1252
-                            18 1305 26 70 96 141 164 167 50 20 94 20 2173 20 2100 1 2123 1 2176 -19z"/>
-                            <path d="M2474 3859 c-46 -13 -129 -92 -148 -140 -22 -54 -22 -143 -1 -197 22
+                            18 1305 26 70 96 141 164 167 50 20 94 20 2173 20 2100 1 2123 1 2176 -19z"
+                                        />
+                                        <path
+                                            d="M2474 3859 c-46 -13 -129 -92 -148 -140 -22 -54 -22 -143 -1 -197 22
                             -55 101 -125 159 -142 28 -8 46 -19 49 -31 3 -11 14 -19 27 -19 13 0 24 8 27
                             19 3 12 21 23 49 31 58 17 137 87 159 142 21 54 21 143 -1 197 -20 51 -102
-                            127 -152 141 -44 12 -125 12 -168 -1z"/>
-                            <path d="M2261 3375 c-36 -42 -38 -51 -11 -65 16 -8 26 -5 55 21 37 33 45 63
-                            19 73 -26 10 -31 8 -63 -29z"/>
-                            <path d="M2787 3403 c-24 -23 45 -109 77 -97 27 10 25 34 -5 69 -29 33 -57 44
-                            -72 28z"/>
-                            <path d="M2131 3254 c-33 -28 -39 -55 -17 -73 12 -10 22 -5 55 24 34 31 39 40
-                            30 56 -13 26 -32 24 -68 -7z"/>
-                            <path d="M2920 3265 c-11 -13 -8 -21 21 -51 38 -39 72 -42 77 -8 2 14 -8 30
-                            -28 48 -36 30 -52 32 -70 11z"/>
-                            <path d="M2541 3256 c-7 -8 -11 -36 -9 -63 3 -44 5 -48 28 -48 23 0 25 4 28
-                            48 3 45 -9 77 -28 77 -4 0 -13 -6 -19 -14z"/>
-                            <path d="M1992 3117 c-37 -38 -40 -52 -12 -67 16 -8 26 -4 55 21 24 21 35 39
-                            33 53 -5 34 -39 31 -76 -7z"/>
-                            <path d="M3057 3143 c-16 -15 -5 -43 28 -72 29 -26 39 -29 55 -21 28 15 25 31
-                            -13 68 -32 31 -56 40 -70 25z"/>
-                            <path d="M2534 3057 c-3 -8 -4 -34 -2 -58 3 -39 6 -44 28 -44 24 0 25 3 25 55
-                            0 49 -2 55 -23 58 -12 2 -24 -3 -28 -11z"/>
-                            <path d="M1861 2995 c-33 -29 -42 -69 -16 -79 22 -8 87 52 83 78 -4 30 -31 31
-                            -67 1z"/>
-                            <path d="M3197 3013 c-16 -15 -5 -43 28 -72 39 -34 65 -32 65 4 0 37 -72 90
-                            -93 68z"/>
-                            <path d="M1720 2855 c-28 -29 -33 -39 -23 -53 12 -20 40 -17 66 6 31 27 40 51
-                            26 68 -18 22 -32 17 -69 -21z"/>
-                            <path d="M3331 2876 c-16 -19 -1 -47 39 -76 25 -18 34 -19 45 -10 22 18 18 33
-                            -18 68 -37 36 -49 39 -66 18z"/>
-                            <path d="M2534 2867 c-3 -8 -4 -34 -2 -58 3 -39 6 -44 28 -44 24 0 25 3 25 55
-                            0 49 -2 55 -23 58 -12 2 -24 -3 -28 -11z"/>
-                            <path d="M1585 2727 c-35 -35 -38 -60 -9 -71 21 -8 86 53 82 78 -5 34 -35 31
-                            -73 -7z"/>
-                            <path d="M3467 2753 c-24 -23 45 -109 77 -97 27 10 25 34 -5 69 -29 33 -57 44
-                            -72 28z"/>
-                            <path d="M1256 2690 c-71 -22 -137 -91 -164 -169 -44 -127 39 -277 174 -317
-                            123 -35 233 15 293 135 62 124 13 273 -112 337 -37 20 -149 28 -191 14z"/>
-                            <path d="M3706 2690 c-108 -35 -186 -153 -172 -262 15 -108 85 -195 180 -223
+                            127 -152 141 -44 12 -125 12 -168 -1z"
+                                        />
+                                        <path
+                                            d="M2261 3375 c-36 -42 -38 -51 -11 -65 16 -8 26 -5 55 21 37 33 45 63
+                            19 73 -26 10 -31 8 -63 -29z"
+                                        />
+                                        <path
+                                            d="M2787 3403 c-24 -23 45 -109 77 -97 27 10 25 34 -5 69 -29 33 -57 44
+                            -72 28z"
+                                        />
+                                        <path
+                                            d="M2131 3254 c-33 -28 -39 -55 -17 -73 12 -10 22 -5 55 24 34 31 39 40
+                            30 56 -13 26 -32 24 -68 -7z"
+                                        />
+                                        <path
+                                            d="M2920 3265 c-11 -13 -8 -21 21 -51 38 -39 72 -42 77 -8 2 14 -8 30
+                            -28 48 -36 30 -52 32 -70 11z"
+                                        />
+                                        <path
+                                            d="M2541 3256 c-7 -8 -11 -36 -9 -63 3 -44 5 -48 28 -48 23 0 25 4 28
+                            48 3 45 -9 77 -28 77 -4 0 -13 -6 -19 -14z"
+                                        />
+                                        <path
+                                            d="M1992 3117 c-37 -38 -40 -52 -12 -67 16 -8 26 -4 55 21 24 21 35 39
+                            33 53 -5 34 -39 31 -76 -7z"
+                                        />
+                                        <path
+                                            d="M3057 3143 c-16 -15 -5 -43 28 -72 29 -26 39 -29 55 -21 28 15 25 31
+                            -13 68 -32 31 -56 40 -70 25z"
+                                        />
+                                        <path
+                                            d="M2534 3057 c-3 -8 -4 -34 -2 -58 3 -39 6 -44 28 -44 24 0 25 3 25 55
+                            0 49 -2 55 -23 58 -12 2 -24 -3 -28 -11z"
+                                        />
+                                        <path
+                                            d="M1861 2995 c-33 -29 -42 -69 -16 -79 22 -8 87 52 83 78 -4 30 -31 31
+                            -67 1z"
+                                        />
+                                        <path
+                                            d="M3197 3013 c-16 -15 -5 -43 28 -72 39 -34 65 -32 65 4 0 37 -72 90
+                            -93 68z"
+                                        />
+                                        <path
+                                            d="M1720 2855 c-28 -29 -33 -39 -23 -53 12 -20 40 -17 66 6 31 27 40 51
+                            26 68 -18 22 -32 17 -69 -21z"
+                                        />
+                                        <path
+                                            d="M3331 2876 c-16 -19 -1 -47 39 -76 25 -18 34 -19 45 -10 22 18 18 33
+                            -18 68 -37 36 -49 39 -66 18z"
+                                        />
+                                        <path
+                                            d="M2534 2867 c-3 -8 -4 -34 -2 -58 3 -39 6 -44 28 -44 24 0 25 3 25 55
+                            0 49 -2 55 -23 58 -12 2 -24 -3 -28 -11z"
+                                        />
+                                        <path
+                                            d="M1585 2727 c-35 -35 -38 -60 -9 -71 21 -8 86 53 82 78 -5 34 -35 31
+                            -73 -7z"
+                                        />
+                                        <path
+                                            d="M3467 2753 c-24 -23 45 -109 77 -97 27 10 25 34 -5 69 -29 33 -57 44
+                            -72 28z"
+                                        />
+                                        <path
+                                            d="M1256 2690 c-71 -22 -137 -91 -164 -169 -44 -127 39 -277 174 -317
+                            123 -35 233 15 293 135 62 124 13 273 -112 337 -37 20 -149 28 -191 14z"
+                                        />
+                                        <path
+                                            d="M3706 2690 c-108 -35 -186 -153 -172 -262 15 -108 85 -195 180 -223
                             62 -19 80 -19 145 1 61 18 123 70 154 128 29 55 30 165 3 220 -24 47 -74 100
-                            -119 122 -37 20 -149 28 -191 14z"/>
-                            <path d="M2537 2684 c-14 -14 -7 -101 8 -114 27 -23 46 6 43 64 -3 43 -6 51
-                            -23 54 -12 2 -24 0 -28 -4z"/>
-                            <path d="M2543 2493 c-7 -2 -13 -14 -13 -26 0 -17 -11 -26 -48 -39 -58 -21
+                            -119 122 -37 20 -149 28 -191 14z"
+                                        />
+                                        <path
+                                            d="M2537 2684 c-14 -14 -7 -101 8 -114 27 -23 46 6 43 64 -3 43 -6 51
+                            -23 54 -12 2 -24 0 -28 -4z"
+                                        />
+                                        <path
+                                            d="M2543 2493 c-7 -2 -13 -14 -13 -26 0 -17 -11 -26 -48 -39 -58 -21
                             -124 -76 -146 -122 -16 -33 -16 -34 -58 -24 -35 7 -45 6 -55 -7 -16 -23 -6
                             -44 26 -51 61 -14 61 -14 61 -57 1 -55 28 -113 76 -159 51 -49 100 -68 174
                             -68 74 0 123 19 174 68 48 46 75 104 76 158 0 43 11 54 49 54 10 0 25 8 34 18
                             14 16 15 21 3 37 -11 16 -18 17 -55 8 l-42 -11 -19 38 c-25 49 -82 96 -142
-                            118 -37 13 -48 22 -48 38 0 17 -22 39 -33 33 -1 0 -8 -3 -14 -6z"/>
-                            <path d="M1659 2394 c-19 -23 0 -47 45 -57 45 -11 66 -4 66 22 0 35 -88 63
-                            -111 35z"/>
-                            <path d="M3402 2400 c-42 -10 -55 -22 -50 -46 3 -16 12 -18 48 -16 53 3 80 24
-                            64 49 -13 21 -21 23 -62 13z"/>
-                            <path d="M1851 2357 c-6 -6 -11 -19 -11 -29 0 -19 26 -29 82 -31 27 -2 34 2
-                            36 20 4 24 -14 37 -64 46 -18 3 -36 1 -43 -6z"/>
-                            <path d="M3214 2360 c-42 -9 -54 -18 -54 -40 0 -23 22 -31 63 -23 40 7 57 20
-                            57 43 0 21 -24 29 -66 20z"/>
-                            <path d="M2043 2323 c-7 -3 -13 -15 -13 -29 0 -18 7 -25 28 -30 15 -3 35 -8
-                            45 -11 38 -10 63 38 30 55 -24 12 -75 21 -90 15z"/>
-                            <path d="M3022 2320 c-46 -11 -60 -26 -45 -48 12 -19 77 -19 100 0 18 15 16
-                            45 -3 52 -9 3 -16 6 -17 5 -1 -1 -17 -5 -35 -9z"/>
-                            <path d="M2170 996 l0 -134 -67 -15 c-38 -9 -207 -43 -378 -77 -170 -34 -318
+                            118 -37 13 -48 22 -48 38 0 17 -22 39 -33 33 -1 0 -8 -3 -14 -6z"
+                                        />
+                                        <path
+                                            d="M1659 2394 c-19 -23 0 -47 45 -57 45 -11 66 -4 66 22 0 35 -88 63
+                            -111 35z"
+                                        />
+                                        <path
+                                            d="M3402 2400 c-42 -10 -55 -22 -50 -46 3 -16 12 -18 48 -16 53 3 80 24
+                            64 49 -13 21 -21 23 -62 13z"
+                                        />
+                                        <path
+                                            d="M1851 2357 c-6 -6 -11 -19 -11 -29 0 -19 26 -29 82 -31 27 -2 34 2
+                            36 20 4 24 -14 37 -64 46 -18 3 -36 1 -43 -6z"
+                                        />
+                                        <path
+                                            d="M3214 2360 c-42 -9 -54 -18 -54 -40 0 -23 22 -31 63 -23 40 7 57 20
+                            57 43 0 21 -24 29 -66 20z"
+                                        />
+                                        <path
+                                            d="M2043 2323 c-7 -3 -13 -15 -13 -29 0 -18 7 -25 28 -30 15 -3 35 -8
+                            45 -11 38 -10 63 38 30 55 -24 12 -75 21 -90 15z"
+                                        />
+                                        <path
+                                            d="M3022 2320 c-46 -11 -60 -26 -45 -48 12 -19 77 -19 100 0 18 15 16
+                            45 -3 52 -9 3 -16 6 -17 5 -1 -1 -17 -5 -35 -9z"
+                                        />
+                                        <path
+                                            d="M2170 996 l0 -134 -67 -15 c-38 -9 -207 -43 -378 -77 -170 -34 -318
                             -63 -327 -66 -15 -5 -18 -18 -18 -85 l0 -79 1180 0 1180 0 0 80 c0 74 -1 80
                             -22 85 -13 3 -180 37 -371 75 -192 39 -359 73 -373 76 -24 6 -24 7 -24 140 l0
-                            134 -390 0 -390 0 0 -134z"/>
-                            </g>
-                            </svg>
-                            <!-- <img class="build__svg" src="img/graph.svg" alt=""> -->
-                        </div>
-                        <div class="build-buttons__item clear">
-                            <?xml version="1.0" encoding="iso-8859-1"?>
-                            <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                width="35px" height="35px" viewBox="0 0 438.542 438.542" style="enable-background:new 0 0 438.542 438.542;"
-                                xml:space="preserve">
-                            <g>
-                                <path d="M427.408,19.697c-7.803-3.23-14.463-1.902-19.986,3.999l-37.116,36.834C349.94,41.305,326.672,26.412,300.5,15.848
+                            134 -390 0 -390 0 0 -134z"
+                                        />
+                                    </g>
+                                </svg>
+                                <!-- <img class="build__svg" src="img/graph.svg" alt=""> -->
+                            </div>
+                            <div class="build-buttons__item clear">
+                                <?xml version="1.0" encoding="iso-8859-1"?>
+                                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                                <svg
+                                    version="1.1"
+                                    id="Capa_1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px"
+                                    y="0px"
+                                    width="35px"
+                                    height="35px"
+                                    viewBox="0 0 438.542 438.542"
+                                    style="
+                                        enable-background: new 0 0 438.542
+                                            438.542;
+                                    "
+                                    xml:space="preserve"
+                                >
+                                    <g>
+                                        <path
+                                            d="M427.408,19.697c-7.803-3.23-14.463-1.902-19.986,3.999l-37.116,36.834C349.94,41.305,326.672,26.412,300.5,15.848
                                     C274.328,5.285,247.251,0.003,219.271,0.003c-29.692,0-58.052,5.808-85.08,17.417c-27.03,11.61-50.347,27.215-69.951,46.82
                                     c-19.605,19.607-35.214,42.921-46.824,69.949C5.807,161.219,0,189.575,0,219.271c0,29.687,5.807,58.05,17.417,85.079
                                     c11.613,27.031,27.218,50.347,46.824,69.952c19.604,19.599,42.921,35.207,69.951,46.818c27.028,11.611,55.388,17.419,85.08,17.419
@@ -181,108 +372,179 @@
                                     c0-19.795,3.858-38.691,11.563-56.674c7.707-17.985,18.127-33.547,31.261-46.678c13.135-13.134,28.693-23.555,46.682-31.265
                                     c17.983-7.707,36.879-11.563,56.671-11.563c38.259,0,71.475,13.039,99.646,39.116l-39.409,39.394
                                     c-5.903,5.711-7.231,12.279-4.001,19.701c3.241,7.614,8.856,11.42,16.854,11.42h127.906c4.949,0,9.23-1.807,12.848-5.424
-                                    c3.613-3.616,5.42-7.898,5.42-12.847V36.55C438.542,28.558,434.84,22.943,427.408,19.697z"/>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            </svg>
-
+                                    c3.613-3.616,5.42-7.898,5.42-12.847V36.55C438.542,28.558,434.84,22.943,427.408,19.697z"
+                                        />
+                                    </g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__item">
+                        <div class="table__title">ТАБЛИЦЯ ІНЦИДЕНТНОСТІ</div>
+                        <div class="table__window">
+                            <table id="tableB" class="table">
+                                <tr>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            value="0"
+                                            type="text"
+                                            class="table__input"
+                                        />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table__btns">
+                            <div class="table__button plus"></div>
+                            <div class="table__button minus"></div>
                         </div>
                     </div>
                 </div>
-                <div class="table__item">
-                    <div class="table__title">
-                        ТАБЛИЦЯ ІНЦИДЕНТНОСТІ
-                    </div>
-                    <div class="table__window">
-                        <table id="tableB" class="table">
-                            <tr>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                            </tr>
-                            <tr>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                            </tr>
-                            <tr>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                            </tr>
-                            <tr>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                                <td><input value="0" type="text" class="table__input"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="table__btns">
-                        <div class="table__button plus">
-                        </div>
-                        <div class="table__button minus"></div>
-                    </div>
-                </div>
-
             </div>
-            
         </div>
-        
-    </div>
-    <div class="modal">
-        <div class="modal__wrapper">
-            <div id = 'mynetwork' class="modal__window"></div>
-            <div class="close"> 
-                <img src="img/cancel.png" alt="CLOSE">
-            </div>  
-        </div>  
-    </div>
-    
-    
-    
-    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <script src="js/script.js"></script>
-    
-    <script src="js/svg.js"></script>
-    <script src="js/switch.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <div class="modal">
+            <div class="modal__wrapper">
+                <div id="mynetwork" class="modal__window"></div>
+                <div class="close">
+                    <img src="img/cancel.png" alt="CLOSE" />
+                </div>
+            </div>
+        </div>
 
+        <script
+            type="text/javascript"
+            src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+        ></script>
+        <script src="js/script.js"></script>
 
-    
-</body>
+        <!-- <script src="js/svg.js"></script> -->
+        <script src="js/switch.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </body>
 </html>
-
-
